@@ -67,8 +67,7 @@ keymap("t", "<Esc>", "<C-\\><C-n>", opts)
 
 -- Plugins settings
 keymap("n", "<C-n>", ":NvimTreeFindFileToggle<CR>", opts)
-keymap("n", "<C-r>", ":NvimTreeRefresh<CR>", opts)
-
+keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 
 keymap("n", "gb", ":BufferLinePick<CR>", opts)
 keymap("n", "<leader>b", ":BufferLineCycleNext<CR>", opts)

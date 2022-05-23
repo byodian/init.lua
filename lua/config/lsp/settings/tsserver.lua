@@ -5,9 +5,9 @@ if not lsp_status_ok then
 end
 
 return {
-	settings = {},
+	init_options = require("nvim-lsp-ts-utils").init_options,
 	on_attach = function(client, bufnr)
-		require("lsp.handlers").default_on_attach(client, bufnr)
+		require("config.lsp.handlers").default_on_attach(client, bufnr)
 
 		ts_utils.setup({
 			enable_import_on_completion = true,
