@@ -22,7 +22,7 @@ local sources = {
 	}),
 	builtins.formatting.black.with({ extra_args = { "--fast" } }),
 	builtins.formatting.stylua,
-	builtins.diagnostics.write_good,
+	-- builtins.diagnostics.write_good,
 	-- builtins.diagnostics.eslint,
 	builtins.code_actions.eslint_d,
 	builtins.code_actions.gitsigns,

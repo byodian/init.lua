@@ -23,6 +23,9 @@ keymap("n", "<leader>ln", ":set cursorline!<CR>", opts)
 -- escape insert mode
 keymap("i", "jk", "<esc>", opts)
 
+-- save
+keymap("n", "<leader>w", ":w<cr>", opts)
+
 -- zoom a vim pane, <C-w>= to re-balance
 keymap("n", "<leader>=", ":wincmd =<cr>", opts)
 
