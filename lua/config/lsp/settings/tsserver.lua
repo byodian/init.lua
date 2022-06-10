@@ -16,6 +16,7 @@ return {
 			update_imports_on_move = true,
 			require_confirmation_on_move = true,
 			watch_dir = nil,
+			auto_inlay_hints = false,
 		})
 
 		-- required to fix code action ranges and filter diagnostics
@@ -25,6 +26,6 @@ return {
 		local ts_options = { silent = true }
 		vim.api.nvim_buf_set_keymap(bufnr, "n", "gz", ":TSLspOrganize<CR>", ts_options)
 		vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", ts_options)
-		vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", ts_options)
+		vim.api.nvim_buf_set_keymap(bufnr, "n", "gI", ":TSLspImportAll<CR>", ts_options)
 	end,
 }
