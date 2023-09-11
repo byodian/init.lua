@@ -53,6 +53,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  eslint = {},
 }
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
