@@ -57,6 +57,14 @@ require('lazy').setup({
   },
 
   {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp"
+  },
+
+  {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = {
@@ -108,10 +116,25 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    main = 'ibl',
+    event = { "BufReadPre" },
     opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
+      indent = {
+        char = '┊'
+      },
+      whitespace = { remove_blankline_trail = true },
+      scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+        include = {
+          node_type = { ["*"] = { "*"} },
+        }
+      }
     },
+    config = function(_, opts)
+      require('ibl').setup(opts)
+    end
   },
 
   -- "gc" to comment visual regions/lines
