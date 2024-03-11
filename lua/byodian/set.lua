@@ -4,10 +4,10 @@ vim.o.relativenumber = true
 
 vim.o.scrolloff = 10
 
--- vim.opt.tabstop = 4
--- vim.opt.softtabstop = 4
--- vim.opt.shiftwidth = 4
--- vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 vim.o.hlsearch = false
 vim.wo.number = true
