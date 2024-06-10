@@ -32,6 +32,8 @@ autocmd('BufReadPost', {
   end
 })
 
+vim.cmd("command! TSLspRename lua require'byodian.rename-file'.manual()")
+
 -- netrw file exporer
 vim.g.netrw_browser_split = 0
 vim.g.netrw_banner = 0
