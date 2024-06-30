@@ -128,7 +128,7 @@ require('lazy').setup({
         show_start = false,
         show_end = false,
         include = {
-          node_type = { ["*"] = { "*"} },
+          node_type = { ["*"] = { "*" } },
         }
       }
     },
@@ -182,6 +182,26 @@ require('lazy').setup({
       vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
       vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
     end
+  },
+
+  {
+    'mfussenegger/nvim-jdtls'
+  },
+
+  -- test
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-neotest/neotest-python",
+      "nvim-neotest/neotest-go",
+      "nvim-neotest/neotest-jest",
+      "marilari88/neotest-vitest"
+    },
+
   }
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins"
   -- require 'kickstart.plugins.autoformat',

@@ -46,7 +46,10 @@ end
 local servers = {
   clangd = {},
   gopls = {},
-  pyright = {},
+  gradle_ls = {},
+  jdtls = {},
+  -- pyright = {},
+  pylsp = {},
   rust_analyzer = {},
   tsserver = {},
   html = { filetypes = { 'html', 'twig', 'hbs' } },
