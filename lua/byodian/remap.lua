@@ -33,6 +33,8 @@ vim.keymap.set("i", "jk", "<esc>", { silent = true })
 
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
+vim.keymap.set("n", "<leader>ww", ":w<CR>", { silent = true })
+
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format current buffer with LSP" })
 
 vim.keymap.set("n", "<leader>ve", ":edit ~/.config/nvim/init.lua<CR>", { noremap = true })

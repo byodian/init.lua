@@ -202,7 +202,16 @@ require('lazy').setup({
       "marilari88/neotest-vitest"
     },
 
+  },
+
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    opts = {
+      open_mapping = [[<c-\>]]
+    }
   }
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins"
   -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
